@@ -297,6 +297,7 @@ gcloud compute instance-templates create "$MIG" \
   --region "$REGION" --network "$NETWORK" \
   --subnet "$SUBNET" \
   --no-address \
+  --shielded-integrity-monitoring --shielded-secure-boot --shielded-vtpm \
   --tags=https-server,apigee-network-proxy,gke-apigee-proxy \
   --machine-type "$PROXY_MACHINE_TYPE""$PREEMPTIBLE_FLAG" \
   --image-family centos-7 \
